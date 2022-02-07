@@ -4,8 +4,6 @@ import pytest
 
 from thorn.django.models import Subscriber
 
-from kombu.five import text_t
-
 from django.contrib.auth import get_user_model
 
 
@@ -24,7 +22,7 @@ def subscriber(user):
 class test_Subscriber:
 
     def test_str(self, subscriber):
-        assert text_t(subscriber)
+        assert str(subscriber)
 
     def test_as_dict(self, subscriber):
         assert subscriber.as_dict() == {

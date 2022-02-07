@@ -3,7 +3,7 @@ from __future__ import absolute_import, unicode_literals
 
 import threading
 
-from vine.five import monotonic
+from time import monotonic
 
 __all__ = [
     'current_app', 'set_current_app', 'set_default_app',
