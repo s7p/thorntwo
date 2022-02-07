@@ -1,4 +1,5 @@
-celery
+celery==4.4
+eventlet
 six
 requests
 vine>=1.1.0
