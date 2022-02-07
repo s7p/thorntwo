@@ -6,8 +6,7 @@ from uuid import uuid4
 from django.conf import settings as django_settings
 from django.db import models
 from django.utils import text
-from django.utils.encoding import python_2_unicode_compatible
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from thorn.conf import event_choices, MIME_JSON, MIME_URLFORM
 from thorn.generic.models import AbstractSubscriber, SubscriberModelMixin
@@ -34,7 +33,6 @@ def random_secret64():
 
 
 @AbstractSubscriber.register
-@python_2_unicode_compatible
 class Subscriber(models.Model, SubscriberModelMixin):
     objects = SubscriberManager()
 

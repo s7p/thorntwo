@@ -43,13 +43,13 @@ Two new API endpoints will now be available in your application:
 """
 from __future__ import absolute_import, unicode_literals
 
-from django.conf.urls import url
+from django.urls import re_path
 
 from . import views
 
 urlpatterns = [
-    url(r'^$',
-        views.SubscriberList.as_view(), name='list'),
-    url(r'^(?P<uuid>[0-9a-fA-F-]+)/$',
-        views.SubscriberDetail.as_view(), name='detail'),
+    re_path(r'^$',
+            views.SubscriberList.as_view(), name='list'),
+    re_path(r'^(?P<uuid>[0-9a-fA-F-]+)/$',
+            views.SubscriberDetail.as_view(), name='detail'),
 ]
